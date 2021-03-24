@@ -1,9 +1,9 @@
 template_path: bridgeworker.yaml
 stack_name: bridgeworker-uat
 parameters:
-  AwsDefaultVpcId: vpc-9c70bbf9
+  AwsDefaultVpcId: vpc-f389e98a
   AwsSnsNotificationEndpoint: bridgeworker-uat@sagebase.org
-  BackfillBucket: org-sagebridge-backfill-uat
+  BackfillBucket: org-sagebridge-backfill-devstaging
   BridgeEnv: uat
   BridgeUser: heroku
   BridgeWorkerEmail: bridgeit+worker@sagebase.org
@@ -16,4 +16,5 @@ parameters:
   SynapseApiKey:  !ssm /bridgeworker-uat/SynapseApiKey
   SynapsePrincipalId: '3327942'
   SynapseUser: BridgeExporterStaging
-  UserDataBucket: org-sagebridge-userdata-uat
+  UserDataBucket: org-sagebridge-userdata-devstaging
+  WorkerSqsQueueUrl: https://sqs.us-east-1.amazonaws.com/420786776710/Bridge-WorkerPlatform-Request-staging
