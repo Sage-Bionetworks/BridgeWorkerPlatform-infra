@@ -293,6 +293,7 @@ Resources:
           Statement:
             Action:
               - 'ses:SendEmail'
+              - 'ses:SendRawEmail'
             Effect: Allow
             Resource:
               - !Sub 'arn:aws:ses:${AWS::Region}:${AWS::AccountId}:identity/*'
