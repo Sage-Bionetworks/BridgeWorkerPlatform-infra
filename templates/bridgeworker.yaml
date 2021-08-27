@@ -108,12 +108,20 @@ Parameters:
   NewRelicLicenseKey:
     Type: String
     NoEcho: true
+  RawHealthDataBucket:
+    Type: String
   SynapseApiKey:
     Type: String
     NoEcho: true
   SynapsePrincipalId:
     Type: String
   SynapseUser:
+    Type: String
+  UploadBucket:
+    Type: String
+  UploadCertBucket:
+    Type: String
+  UploadPrivateKeyBucket:
     Type: String
   UserDataBucket:
     Type: String
@@ -284,6 +292,10 @@ Resources:
             Effect: Allow
             Resource:
               - !Sub 'arn:aws:s3:::${BackfillBucket}/*'
+              - !Sub 'arn:aws:s3:::${RawHealthDataBucket}/*'
+              - !Sub 'arn:aws:s3:::${UploadBucket}/*'
+              - !Sub 'arn:aws:s3:::${UploadCertBucket}/*'
+              - !Sub 'arn:aws:s3:::${UploadPrivateKeyBucket}/*'
               - !Sub 'arn:aws:s3:::${UserDataBucket}/*'
   AWSIAMSesManagedPolicy:
     Type: 'AWS::IAM::ManagedPolicy'

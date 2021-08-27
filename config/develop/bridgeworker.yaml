@@ -13,8 +13,12 @@ parameters:
   Env: develop
   NewRelicAppName: bridgeworker-develop
   NewRelicLicenseKey: !ssm /infra/NewRelicLicenseKey
+  RawHealthDataBucket: org-sagebridge-rawhealthdata-devdevelop
   SynapseApiKey:  !ssm /bridgeworker-develop/SynapseApiKey
   SynapsePrincipalId: '3330889'
   SynapseUser: BridgeExporterDev
+  UploadBucket: org-sagebridge-upload-devdevelop
+  UploadCertBucket: org-sagebridge-upload-cms-cert-devdevelop
+  UploadPrivateKeyBucket: org-sagebridge-upload-cms-priv-devdevelop
   UserDataBucket: org-sagebridge-userdata-devdevelop
   WorkerSqsQueueUrl: https://sqs.us-east-1.amazonaws.com/420786776710/Bridge-WorkerPlatform-Request-develop
