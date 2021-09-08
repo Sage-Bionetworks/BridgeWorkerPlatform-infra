@@ -13,8 +13,12 @@ parameters:
   Env: production
   NewRelicAppName: bridgeworker-prod
   NewRelicLicenseKey: !ssm /infra/NewRelicLicenseKey
+  RawHealthDataBucket: org-sagebridge-rawhealthdata-prod
   SynapseApiKey:  !ssm /bridgeworker-prod/SynapseApiKey
   SynapsePrincipalId: '3325672'
   SynapseUser: BridgeExporter
+  UploadBucket: org-sagebridge-upload-prod
+  UploadCertBucket: org-sagebridge-upload-cms-cert-prod
+  UploadPrivateKeyBucket: org-sagebridge-upload-cms-priv-prod
   UserDataBucket: org-sagebridge-userdata-prod
   WorkerSqsQueueUrl: https://sqs.us-east-1.amazonaws.com/649232250620/Bridge-WorkerPlatform-Request-prod
