@@ -15,8 +15,8 @@ parameters:
   NewRelicLicenseKey: !ssm /infra/NewRelicLicenseKey
   RawHealthDataBucket: org-sagebridge-rawhealthdata-devstaging
   SynapseApiKey:  !ssm /bridgeworker-uat/SynapseApiKey
-  SynapsePrincipalId: '3327942'
-  SynapseUser: BridgeExporterStaging
+  SynapsePrincipalId: '3336429'
+  SynapseUser: bridgetest
   UploadBucket: org-sagebridge-upload-devstaging
   UploadCertBucket: org-sagebridge-upload-cms-cert-devstaging
   UploadPrivateKeyBucket: org-sagebridge-upload-cms-priv-devstaging
