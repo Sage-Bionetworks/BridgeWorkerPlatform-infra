@@ -9,7 +9,7 @@ parameters:
   BridgeWorkerEmail: bridgeit+worker@sagebase.org
   BridgeWorkerStudy: api
   BridgeWorkerPassword: !ssm /bridgeworker-uat/BridgeWorkerPassword
-  EC2InstanceType: t2.small
+  EC2InstanceType: t3a.small
   Env: staging
   NewRelicAppName: bridgeworker-uat
   NewRelicLicenseKey: !ssm /infra/NewRelicLicenseKey
