@@ -11,6 +11,7 @@ parameters:
   BridgeWorkerPassword: !ssm /bridgeworker-prod/BridgeWorkerPassword
   EC2InstanceType: t3a.2xlarge
   Env: production
+  JavaHeapSize: 24g
   NewRelicAppName: bridgeworker-prod
   NewRelicLicenseKey: !ssm /infra/NewRelicLicenseKey
   RawHealthDataBucket: org-sagebridge-rawhealthdata-prod

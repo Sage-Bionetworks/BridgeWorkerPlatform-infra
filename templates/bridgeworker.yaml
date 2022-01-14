@@ -31,6 +31,9 @@ Parameters:
   Env:
     Type: String
     Default: develop
+  JavaHeapSize:
+    Type: String
+    Default: 1g
   NewRelicAppName:
     Type: String
   NewRelicLicenseKey:
@@ -102,6 +105,12 @@ Resources:
         - Namespace: 'aws:elasticbeanstalk:cloudwatch:logs'
           OptionName: RetentionInDays
           Value: '90'
+        - Namespace: 'aws:elasticbeanstalk:container:tomcat:jvmoptions'
+          OptionName: Xms
+          Value: !Ref JavaHeapSize
+        - Namespace: 'aws:elasticbeanstalk:container:tomcat:jvmoptions'
+          OptionName: Xmx
+          Value: !Ref JavaHeapSize
         - Namespace: 'aws:elasticbeanstalk:hostmanager'
           OptionName: LogPublicationControl
           Value: 'true'
