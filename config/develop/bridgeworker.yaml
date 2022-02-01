@@ -21,4 +21,5 @@ parameters:
   UploadCertBucket: org-sagebridge-upload-cms-cert-devdevelop
   UploadPrivateKeyBucket: org-sagebridge-upload-cms-priv-devdevelop
   UserDataBucket: org-sagebridge-userdata-devdevelop
+  ParticipantRosterBucket: org-sagebridge-participantroster-devdevelop
   WorkerSqsQueueUrl: https://sqs.us-east-1.amazonaws.com/420786776710/Bridge-WorkerPlatform-Request-develop

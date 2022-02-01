@@ -56,6 +56,8 @@ Parameters:
     Type: String
   UserDataBucket:
     Type: String
+  ParticipantRosterBucket:
+    Type: String
   WorkerSqsQueueUrl:
     Type: String
 Resources:
@@ -234,6 +236,7 @@ Resources:
               - !Sub 'arn:aws:s3:::${UploadCertBucket}/*'
               - !Sub 'arn:aws:s3:::${UploadPrivateKeyBucket}/*'
               - !Sub 'arn:aws:s3:::${UserDataBucket}/*'
+              - !Sub 'arn:aws:s3:::${ParticipantRosterBucket}/*'
   AWSIAMSesManagedPolicy:
     Type: 'AWS::IAM::ManagedPolicy'
     Properties:
