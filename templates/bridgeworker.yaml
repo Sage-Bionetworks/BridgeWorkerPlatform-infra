@@ -44,6 +44,9 @@ Parameters:
   SynapseApiKey:
     Type: String
     NoEcho: true
+  SynapseAccessToken:
+    Type: String
+    NoEcho: true
   SynapsePrincipalId:
     Type: String
   SynapseUser:
@@ -147,6 +150,9 @@ Resources:
         - Namespace: 'aws:elasticbeanstalk:application:environment'
           OptionName: synapse.api.key
           Value: !Ref SynapseApiKey
+        - Namespace: 'aws:elasticbeanstalk:application:environment'
+          OptionName: synapse.access.token
+          Value: !Ref SynapseAccessToken
         - Namespace: 'aws:elasticbeanstalk:application:environment'
           OptionName: synapse.principal.id
           Value: !Ref SynapsePrincipalId
