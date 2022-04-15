@@ -41,9 +41,6 @@ Parameters:
     NoEcho: true
   RawHealthDataBucket:
     Type: String
-  SynapseApiKey:
-    Type: String
-    NoEcho: true
   SynapseAccessToken:
     Type: String
     NoEcho: true
@@ -147,9 +144,6 @@ Resources:
         - Namespace: 'aws:elasticbeanstalk:application:environment'
           OptionName: bridge.worker.appId
           Value: !Ref BridgeWorkerStudy
-        - Namespace: 'aws:elasticbeanstalk:application:environment'
-          OptionName: synapse.api.key
-          Value: !Ref SynapseApiKey
         - Namespace: 'aws:elasticbeanstalk:application:environment'
           OptionName: synapse.access.token
           Value: !Ref SynapseAccessToken
