@@ -15,7 +15,6 @@ parameters:
   NewRelicAppName: bridgeworker-prod
   NewRelicLicenseKey: !ssm /infra/NewRelicLicenseKey
   RawHealthDataBucket: org-sagebridge-rawhealthdata-prod
-  SynapseApiKey:  !ssm /bridgeworker-prod/SynapseApiKey
   SynapseAccessToken:  !ssm /bridgeworker-prod/SynapseAccessToken
   SynapsePrincipalId: '3325672'
   SynapseUser: BridgeExporter
