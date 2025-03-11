@@ -192,6 +192,12 @@ Resources:
         Type: SQS/HTTP
   AWSS3AppDeployBucket:
     Type: 'AWS::S3::Bucket'
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
   AWSIAMDdbManagedPolicy:
     Type: 'AWS::IAM::ManagedPolicy'
     Properties:
